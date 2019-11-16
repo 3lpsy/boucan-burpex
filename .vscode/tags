@@ -1,0 +1,82 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/3fdf28bc/
+Add	../httpUtils.py	/^    def Add(self, name, value):$/;"	kind:member	line:102
+Add	../httpUtils.py	/^    def Add(self, name, value):$/;"	kind:member	line:142
+ApiClient	../BoucanBurpex.py	/^class ApiClient(object):$/;"	kind:class	line:43
+Body	../httpUtils.py	/^    Body = ''$/;"	kind:variable	line:18
+Body	../httpUtils.py	/^    Body = ''$/;"	kind:variable	line:57
+BoucanBurpex.py	../BoucanBurpex.py	1;"	kind:file	line:1
+BurpExtender	../BoucanBurpex.py	/^class BurpExtender(IBurpExtender, ITab):$/;"	kind:class	line:145
+Del	../httpUtils.py	/^    def Del(self, name):$/;"	kind:member	line:105
+Del	../httpUtils.py	/^    def Del(self, name):$/;"	kind:member	line:145
+Encode	../httpUtils.py	/^    def Encode(self):$/;"	kind:member	line:159
+FakeSocket	../BoucanBurpex.py	/^class FakeSocket:$/;"	kind:class	line:25
+FixBurpExceptions	../exceptions_fix.py	/^def FixBurpExceptions():$/;"	kind:function	line:24
+FixBurpExceptionsForClass	../exceptions_fix.py	/^def FixBurpExceptionsForClass(cls):$/;"	kind:function	line:18
+Get	../httpUtils.py	/^    def Get(self, name):$/;"	kind:member	line:110
+Get	../httpUtils.py	/^    def Get(self, name):$/;"	kind:member	line:150
+Headers	../httpUtils.py	/^    Headers = None$/;"	kind:variable	line:17
+Headers	../httpUtils.py	/^    Headers = None$/;"	kind:variable	line:56
+Headers	../httpUtils.py	/^class Headers(object):$/;"	kind:class	line:88
+Message	../httpUtils.py	/^    Message = ''$/;"	kind:variable	line:55
+Method	../httpUtils.py	/^    Method = ''$/;"	kind:variable	line:13
+Parse	../httpUtils.py	/^    def Parse(cls, content):$/;"	kind:member	line:21
+Parse	../httpUtils.py	/^    def Parse(cls, content, request=None):$/;"	kind:member	line:61
+Path	../httpUtils.py	/^    Path = ''$/;"	kind:variable	line:15
+PyRunnable	../BoucanBurpex.py	/^class PyRunnable(Runnable):$/;"	kind:class	line:33
+Query	../httpUtils.py	/^    Query = ''$/;"	kind:variable	line:16
+Request	../httpUtils.py	/^    Request = None$/;"	kind:variable	line:58
+Request	../httpUtils.py	/^class Request(object):$/;"	kind:class	line:10
+Response	../httpUtils.py	/^class Response(object):$/;"	kind:class	line:50
+Set	../httpUtils.py	/^    def Set(self, name, value):$/;"	kind:member	line:115
+Set	../httpUtils.py	/^    def Set(self, name, value):$/;"	kind:member	line:155
+Status	../httpUtils.py	/^    Status = 0$/;"	kind:variable	line:54
+String	../httpUtils.py	/^    def String(self):$/;"	kind:member	line:119
+String	../httpUtils.py	/^    def String(self):$/;"	kind:member	line:39
+String	../httpUtils.py	/^    def String(self):$/;"	kind:member	line:78
+Values	../httpUtils.py	/^class Values(object):$/;"	kind:class	line:125
+Version	../httpUtils.py	/^    Version = ''$/;"	kind:variable	line:14
+Version	../httpUtils.py	/^    Version = ''$/;"	kind:variable	line:53
+__init__	../BoucanBurpex.py	/^    def __init__(self, api_url, api_token):$/;"	kind:member	line:44
+__init__	../BoucanBurpex.py	/^    def __init__(self, response_str):$/;"	kind:member	line:26
+__init__	../BoucanBurpex.py	/^    def __init__(self, target, *args, **kwargs):$/;"	kind:member	line:34
+__init__	../httpUtils.py	/^    def __init__(self, headers=''):$/;"	kind:member	line:91
+__init__	../httpUtils.py	/^    def __init__(self, q=''):$/;"	kind:member	line:128
+api	../BoucanBurpex.py	/^    def api(self):$/;"	kind:member	line:284
+buildPanel	../BoucanBurpex.py	/^    def buildPanel(self):$/;"	kind:member	line:162
+build_request	../BoucanBurpex.py	/^    def build_request(self, meth, url, token):$/;"	kind:member	line:72
+callbacks	../BoucanBurpex.py	/^callbacks = None$/;"	kind:variable	line:21
+decorate_function	../exceptions_fix.py	/^def decorate_function(original_function):$/;"	kind:function	line:5
+decorated_function	../exceptions_fix.py	/^    def decorated_function(*args, **kwargs):$/;"	kind:function	line:7
+exceptions_fix.py	../exceptions_fix.py	1;"	kind:file	line:1
+getTabCaption	../BoucanBurpex.py	/^    def getTabCaption(self):$/;"	kind:member	line:266
+getUiComponent	../BoucanBurpex.py	/^    def getUiComponent(self):$/;"	kind:member	line:269
+get_json	../BoucanBurpex.py	/^    def get_json(self, response):$/;"	kind:member	line:96
+get_zones	../BoucanBurpex.py	/^    def get_zones(self):$/;"	kind:member	line:48
+helpers	../BoucanBurpex.py	/^helpers = None$/;"	kind:variable	line:22
+hostname	../BoucanBurpex.py	/^    def hostname(self):$/;"	kind:member	line:129
+httpUtils.py	../httpUtils.py	1;"	kind:file	line:1
+is_https	../BoucanBurpex.py	/^    def is_https(self):$/;"	kind:member	line:126
+loadApiToken	../BoucanBurpex.py	/^    def loadApiToken(self):$/;"	kind:member	line:278
+loadApiUrl	../BoucanBurpex.py	/^    def loadApiUrl(self):$/;"	kind:member	line:272
+loadZones	../BoucanBurpex.py	/^    def loadZones(self):$/;"	kind:member	line:244
+loadZonesLater	../BoucanBurpex.py	/^    def loadZonesLater(self):$/;"	kind:member	line:239
+makefile	../BoucanBurpex.py	/^    def makefile(self, *args, **kwargs):$/;"	kind:member	line:29
+parse	../httpUtils.py	/^def parse(m):$/;"	kind:function	line:169
+parsed_url	../BoucanBurpex.py	/^    def parsed_url(self):$/;"	kind:member	line:136
+port	../BoucanBurpex.py	/^    def port(self):$/;"	kind:member	line:117
+queryEscape	../httpUtils.py	/^def queryEscape(s):$/;"	kind:function	line:183
+queryUnescape	../httpUtils.py	/^def queryUnescape(s):$/;"	kind:function	line:187
+registerExtenderCallbacks	../BoucanBurpex.py	/^    def registerExtenderCallbacks(self, _callbacks):$/;"	kind:member	line:146
+run	../BoucanBurpex.py	/^    def run(self):$/;"	kind:member	line:39
+saveApiToken	../BoucanBurpex.py	/^    def saveApiToken(self, val):$/;"	kind:member	line:281
+saveApiUrl	../BoucanBurpex.py	/^    def saveApiUrl(self, val):$/;"	kind:member	line:275
+service	../BoucanBurpex.py	/^    def service(self):$/;"	kind:member	line:139
+updateConf	../BoucanBurpex.py	/^    def updateConf(self):$/;"	kind:member	line:232
+updateConfEvent	../BoucanBurpex.py	/^    def updateConfEvent(self, button):$/;"	kind:member	line:229
+url	../BoucanBurpex.py	/^    def url(self, path):$/;"	kind:member	line:114
