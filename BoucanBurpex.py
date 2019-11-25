@@ -26,6 +26,7 @@ except ImportError:
 DEFAULT_USER_AGENT = "User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.28) Gecko/00000000 Firefox/30.0.00"
 HTTP_METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "TRACE", "TRACK"]
 
+DEBUG_ENABLED=False
 BEACON_ENABLED=True
 BEACON_NAME="bcand"
 
@@ -239,6 +240,9 @@ class Injector(IProxyListener):
         # TODO: add referer?
         # TODO: set/replace Cache-Control with "no-transform"
         for zone in self.getZones():
+            if DEBUG_ENABLED:
+                print "[*] Injection Target: " + zone["domain"]
+
             # injection = injectionMethod, injectionType,injectionTarget,injectionValue
             for injection in self.getInjections():
                 # rebuild header list
@@ -259,6 +263,9 @@ class Injector(IProxyListener):
 
                 # use .format() ?
                 injectionValue = injectionValue.replace('%s', zone["domain"])
+
+                if DEBUG_ENABLED:
+                    print "[*] Injection Value: " + injectionValue
 
                 targetHost = ""
                 for h in baseHeaders:
@@ -286,6 +293,8 @@ class Injector(IProxyListener):
 
                 if injectionType == "param":
                     if BEACON_ENABLED:
+                        if DEBUG_ENABLED:
+                            print "[*] Attaching beacon: " + BEACON_NAME + "=" + beacon
                         request = helpers.addParameter(request, beaconParam)
 
                     # IParameter.PARAM_URL == 0
@@ -318,11 +327,16 @@ class Injector(IProxyListener):
                     modifiedRequest = helpers.buildHttpMessage(headers, body)
                     # add the beacon, after making the body
                     if BEACON_ENABLED:
+                        if DEBUG_ENABLED:
+                            print "[*] Attaching beacon: " + BEACON_NAME + "=" + beacon
                         modifiedRequest = helpers.addParameter(modifiedRequest, beaconParam)
 
                 else:
                     print "[!] Unrecognized Injection Type for Injection: " + injection
                     continue
+
+                if DEBUG_ENABLED:
+                    print "[*] Making injection request for: " + injectionDesc
 
                 # print "Sending Injection Request..."
                 httpRequestResponse = callbacks.makeHttpRequest(
@@ -332,6 +346,9 @@ class Injector(IProxyListener):
                     print "[!] Failed to get response for injection. Response has no bytes"
                 else:
                     # print "Adding RR to SiteMap"
+                    if DEBUG_ENABLED:
+                        print "[*] Adding requests/reseponse to sitemap for: " + injectionDesc
+                        
                     callbacks.addToSiteMap(httpRequestResponse)
                     # request = str(helpers.bytesToString(httpRequestResponse.getRequest()))
                     # print "REQUEST:"
