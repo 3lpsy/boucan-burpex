@@ -348,7 +348,7 @@ class Injector(IProxyListener):
                     # print "Adding RR to SiteMap"
                     if DEBUG_ENABLED:
                         print "[*] Adding requests/reseponse to sitemap for: " + injectionDesc
-                        
+
                     callbacks.addToSiteMap(httpRequestResponse)
                     # request = str(helpers.bytesToString(httpRequestResponse.getRequest()))
                     # print "REQUEST:"
@@ -356,6 +356,9 @@ class Injector(IProxyListener):
                     # response = str(helpers.bytesToString(httpRequestResponse.getResponse()))
                     # print "RESPONSE:"
                     # print response
+                    if DEBUG_ENABLED:
+                        print "-----"
+                        print ""
 
     def processProxyMessage(self, messageIsRequest, message):
         global callbacks
