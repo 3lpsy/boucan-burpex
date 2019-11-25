@@ -226,7 +226,7 @@ class Injector(IProxyListener):
 
     # request: messageInfo: IHttpRequestResponse, IRequestInfo
     def injectPayloads(self, messageInfo, requestInfo):
-        print "Injecting Payloads..."
+        print "[*] Injecting Payloads..."
         host = requestInfo.url.getHost()
         port = requestInfo.url.port
         https = 1 if 'https' in requestInfo.url.getProtocol() else 0
@@ -241,7 +241,7 @@ class Injector(IProxyListener):
         # TODO: set/replace Cache-Control with "no-transform"
         for zone in self.getZones():
             if DEBUG_ENABLED:
-                print "[*] Injection Target: " + zone["domain"]
+                print "[.] Injection Target: " + zone["domain"]
 
             # injection = injectionMethod, injectionType,injectionTarget,injectionValue
             for injection in self.getInjections():
@@ -265,7 +265,7 @@ class Injector(IProxyListener):
                 injectionValue = injectionValue.replace('%s', zone["domain"])
 
                 if DEBUG_ENABLED:
-                    print "[*] Injection Value: " + injectionValue
+                    print "[.] Injection Value: " + injectionValue
 
                 targetHost = ""
                 for h in baseHeaders:
@@ -294,7 +294,7 @@ class Injector(IProxyListener):
                 if injectionType == "param":
                     if BEACON_ENABLED:
                         if DEBUG_ENABLED:
-                            print "[*] Attaching beacon: " + BEACON_NAME + "=" + beacon
+                            print "[.] Attaching beacon: " + BEACON_NAME + "=" + beacon
                         request = helpers.addParameter(request, beaconParam)
 
                     # IParameter.PARAM_URL == 0
@@ -328,7 +328,7 @@ class Injector(IProxyListener):
                     # add the beacon, after making the body
                     if BEACON_ENABLED:
                         if DEBUG_ENABLED:
-                            print "[*] Attaching beacon: " + BEACON_NAME + "=" + beacon
+                            print "[.] Attaching beacon: " + BEACON_NAME + "=" + beacon
                         modifiedRequest = helpers.addParameter(modifiedRequest, beaconParam)
 
                 else:
@@ -336,7 +336,7 @@ class Injector(IProxyListener):
                     continue
 
                 if DEBUG_ENABLED:
-                    print "[*] Making injection request for: " + injectionDesc
+                    print "[.] Making injection request for: " + injectionDesc
 
                 # print "Sending Injection Request..."
                 httpRequestResponse = callbacks.makeHttpRequest(
@@ -347,7 +347,7 @@ class Injector(IProxyListener):
                 else:
                     # print "Adding RR to SiteMap"
                     if DEBUG_ENABLED:
-                        print "[*] Adding requests/reseponse to sitemap for: " + injectionDesc
+                        print "[.] Adding requests/reseponse to sitemap for: " + injectionDesc
 
                     callbacks.addToSiteMap(httpRequestResponse)
                     # request = str(helpers.bytesToString(httpRequestResponse.getRequest()))
